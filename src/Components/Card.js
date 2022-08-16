@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import React from 'react';
+import Popup from "./Popup";
 
 
 export default function Card(props){
@@ -7,13 +8,6 @@ export default function Card(props){
 
     const toggleModal = () => {
         setModal(!modal)
-        if(!modal) {
-            console.log("Yes");
-            document.body.classList.add('active-modal')
-        } else {
-            console.log("No");
-            document.body.classList.remove('active-modal')
-        }
     }
 
     return (
@@ -29,7 +23,15 @@ export default function Card(props){
             </div>
 
             {modal && (
-                <div className="card">
+                <Popup showPopup={setModal} info = {props}></Popup>
+            )}
+        </>
+
+    )
+
+}
+/*
+<div className="card">
                     <span className="close" onClick={toggleModal}>
                     &times;
                     </span>
@@ -53,9 +55,4 @@ export default function Card(props){
                         <img src={props.img}></img>
                     </div>
                 </div>
-            )}
-        </>
-
-    )
-
-}
+ */
