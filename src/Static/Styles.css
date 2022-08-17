@@ -53,6 +53,18 @@
     grid-column-end: 5;
 }
 
+.photo-img-div
+{
+    display: inline-block;
+    width: 100%;
+}
+
+.photo-img{
+    display: inline-block;
+    vertical-align:top;
+    width: 100%;
+}
+
 .photo > img {
     object-fit: cover;
     width: 100%;
@@ -153,4 +165,8 @@
     to {
         transform: scale(1);
     }
+}
+body
+{
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
 }

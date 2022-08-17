@@ -16,8 +16,8 @@ export default function Card(props){
         <>
             <div className="card-front" style={{ backgroundColor: `${props.color}` }}>
                 <h1 className="h1-card">{props.name}</h1>
-                <div className="photo">
-                    <img src={props.img}></img>
+                <div className="photo-img-div">
+                    <img className="photo-img" src={props.img}></img>
                 </div>
                 <div className="show-more-button-div">
                     <button className="show-more-button" onClick={toggleModal}>Show More</button>
