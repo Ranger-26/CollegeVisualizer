@@ -19,14 +19,16 @@ export default function Popup(props){
                         </div>
 
                         <div className="info">
-                            <p>College Size: {props.info.size}</p>
-                            <p>Student Size: {props.info.studentsize}</p>
+                            <h1 className="simple-center">College Size Info</h1>
+                            <p className="simple-center">College Size: {props.info.size}</p>
+                            <p className="simple-center">Student Size: {props.info.studentsize}</p>
                         </div>
 
                         <div className="majors">
-                            <p>Top three majors: {props.info.majors.map(m => {
-                                return <p>{m}</p>
-                            })}</p>
+                            <h1 className="simple-center">Top Majors</h1>
+                            {props.info.majors.map(m => {
+                                return <p className="simple-center">{props.info.majors.indexOf(m)+1+". "}{m}</p>
+                            })}
                         </div>
 
                         <div className="photo">
@@ -38,6 +40,5 @@ export default function Popup(props){
             ,
             document.getElementById("portal")
         )
-
     )
 }
