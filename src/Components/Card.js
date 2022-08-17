@@ -19,8 +19,8 @@ export default function Card(props){
                 <div className="photo">
                     <img src={props.img}></img>
                 </div>
-                <div>
-                    <button onClick={toggleModal}>Show More</button>
+                <div className="show-more-button-div">
+                    <button className="show-more-button" onClick={toggleModal}>Show More</button>
                 </div>
             </div>
 
